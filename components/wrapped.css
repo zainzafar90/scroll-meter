@@ -1,0 +1,231 @@
+.sw-card {
+  position: relative;
+  border-radius: 22px;
+  padding: 20px;
+  color: #fff;
+  font-family: -apple-system, "SF Pro Display", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(180deg, rgba(18, 18, 20, 0.78) 0%, rgba(18, 18, 20, 0.16) 100%);
+  border: 1px solid transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    inset 0 -16px 30px -18px rgba(184, 204, 255, 0.2),
+    0 18px 44px rgba(0, 0, 0, 0.42);
+  -webkit-backdrop-filter: blur(22px) saturate(155%);
+  backdrop-filter: blur(22px) saturate(155%);
+}
+
+/* identity */
+.sw-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.sw-id {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.sw-glyph {
+  width: 26px;
+  height: 26px;
+  display: block;
+  /* icon source is now full-bleed (no baked corners); round it here for the card */
+  border-radius: 7px;
+}
+.sw-name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.sw-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* hero + ring */
+.sw-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.sw-hero-main {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.sw-overline {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+.sw-num {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: #f5f5f7;
+}
+.sw-num small {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-left: 3px;
+}
+.sw-cmp {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ring */
+.sw-ring {
+  flex: 0 0 auto;
+}
+.sw-ring-track {
+  stroke: rgba(255, 255, 255, 0.14);
+}
+.sw-ring-arc {
+  stroke: #fff;
+  transition: stroke-dasharray 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sw-ring-label {
+  fill: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+/* streak */
+.sw-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  padding: 7px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+}
+.sw-chip b {
+  font-weight: 500;
+}
+.sw-chip-sub {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* site breakdown */
+.sw-list {
+  margin-bottom: 4px;
+}
+.sw-list-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 11px;
+}
+.sw-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 11px;
+  font-size: 13px;
+}
+.sw-row:last-child {
+  margin-bottom: 0;
+}
+.sw-fav {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+}
+.sw-fav-mono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+.sw-site {
+  flex: 0 0 90px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.86);
+}
+.sw-track {
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+.sw-fill {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.62);
+}
+.sw-amt {
+  flex: 0 0 auto;
+  width: 42px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.6);
+  font-variant-numeric: tabular-nums;
+}
+
+.sw-empty {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* weekly sparkline */
+.sw-week {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.sw-week-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 30px;
+}
+.sw-bar {
+  width: 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.sw-bar.is-today {
+  background: #fff;
+}
+.sw-week-total {
+  text-align: right;
+}
+.sw-week-cap {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sw-week-num {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 2px;
+}
